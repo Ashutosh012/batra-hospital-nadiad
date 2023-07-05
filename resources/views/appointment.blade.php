@@ -86,8 +86,7 @@
                                     <div class="col-lg-12">
                                         <span class="calender">
                                             <label for="datepicker">Take Appointment for Doctor</label>
-                                            <input type="datetime-local" id="datepicker" name="appointment_date">
-                                            <!-- <input type="text" id="datepicker" placeholder="MM/DD/YYYY" name="appointment_date"> -->
+                                            <input type="datetime-local" id="datepicker" placeholder="YYYY/MM/DD" name="appointment_date">
                                         </span>
                                     </div>
                                 </div>
@@ -117,14 +116,18 @@
     <script type="text/javascript">
 
         $(document).ready(function(){
-            // $( function() {
-            //     $( "#datepicker" ).datepicker({
-            //         minDate : 0
-            //     });
-            //   });
             config = {
                 enableTime: true,
-                dateFormat: 'YYYY-MM-DD H:i:s',
+                dateFormat: 'Y-m-d H:i',
+                minDate: "today",
+                minTime: "10:00",
+                maxTime: "18:00",
+                defaultTime: "10:00",
+                disable: [
+                    function(date){
+                        return date.getDay() == 0;
+                    }
+                ]
             }
             flatpickr("input[type=datetime-local]", config);
         });

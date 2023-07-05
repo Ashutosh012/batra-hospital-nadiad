@@ -423,19 +423,18 @@
                                             <span class="available"></span>
                                             <div class="doctor-card-img">
                                                 <div class="back-img"
-                                                    style="background-image: url(assets/images/dr-khushi.jpg);">
+                                                    style="background-image: url(assets/images/monika-batra.jpg);">
                                                 </div>
                                             </div>
                                             <div class="name">
-                                                <h3 class="h3-title">Dr. Happy</h3>
+                                                <h3 class="h3-title">Dr. Monika Batra</h3>
                                             </div>
                                             <div class="position">
-                                                <h4 class="h4-title">Sr. Gynecologist</h4>
+                                                <h4 class="h4-title">D.N.B ( Obstetrics and Gynecology)</h4>
                                             </div>
                                             <div class="text">
-                                                <p>On the other hand, we denounce with righteous indignation and
-                                                    dislike
-                                                    men who are so beguiled and demoralized</p>
+                                                <p>Fellowship in Laparoscopy, Fetal Medicine ( ICOG) and
+                                                    Consultant Fetal Medicine, Obstetrics and Gynecology</p>
                                             </div>
                                             <div class="other-content-wp">
                                                 <div class="social-link">
@@ -461,7 +460,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="btn-wp">
-                                                    <a href="appointment.html" class="sec-btn solid-btn"
+                                                    <a href="#appointment" class="sec-btn solid-btn"
                                                         title="appointment">Appointment</a>
                                                 </div>
                                             </div>

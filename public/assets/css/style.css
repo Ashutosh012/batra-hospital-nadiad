@@ -1555,11 +1555,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .isotope-wrapper .grid {
   margin-left: -15px;
   margin-right: -15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .grid-item {
   width: 33.33%;
   padding: 0 15px;
+  position: static !important;
+  left: initial !important;
+  top: initial !important;
 }
 
 .grid-item--width2 {
@@ -4675,6 +4681,23 @@ section.main-blog.service-page {
 
   .main-gallery.gallery-page .galery-content-wp:before {
     top: 110px;
+  }
+
+  .map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 52.25%;
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 

@@ -35,7 +35,7 @@
                                             the diagnosis.</p>
                                     </div>
                                     <div class="read-more-wp">
-                                        <a href="service-detail.html" title="know more">Know
+                                        <a href="#" title="know more">Know
                                             More</a>
                                         <span><i class="fas fa-arrow-right"></i></span>
                                     </div>
@@ -63,7 +63,7 @@
                                             the diagnosis.</p>
                                     </div>
                                     <div class="read-more-wp">
-                                        <a href="service-detail.html" title="know more">Know
+                                        <a href="#" title="know more">Know
                                             More</a>
                                         <span><i class="fas fa-arrow-right"></i></span>
                                     </div>
@@ -93,7 +93,7 @@
                                     </div>
 
                                     <div class="read-more-wp">
-                                        <a href="service-detail.html" title="know more">Know
+                                        <a href="#" title="know more">Know
                                             More</a>
                                         <span><i class="fas fa-arrow-right"></i></span>
                                     </div>
@@ -121,7 +121,7 @@
                                             the diagnosis.</p>
                                     </div>
                                     <div class="read-more-wp">
-                                        <a href="service-detail.html" title="know more">Know
+                                        <a href="#" title="know more">Know
                                             More</a>
                                         <span><i class="fas fa-arrow-right"></i></span>
                                     </div>
@@ -149,7 +149,7 @@
                                             the diagnosis.</p>
                                     </div>
                                     <div class="read-more-wp">
-                                        <a href="service-detail.html" title="know more">Know
+                                        <a href="#" title="know more">Know
                                             More</a>
                                         <span><i class="fas fa-arrow-right"></i></span>
                                     </div>
@@ -176,7 +176,7 @@
                                             the diagnosis.</p>
                                     </div>
                                     <div class="read-more-wp">
-                                        <a href="service-detail.html" title="know more">Know
+                                        <a href="#" title="know more">Know
                                             More</a>
                                         <span><i class="fas fa-arrow-right"></i></span>
                                     </div>

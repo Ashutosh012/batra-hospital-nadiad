@@ -28,7 +28,7 @@
                                 </ul>
                             </div>
                             <div class="about-us-btn">
-                                <a href="about-us.html" class="sec-btn" title="know more">Know
+                                <a href="#" class="sec-btn" title="know more">Know
                                     More</a>
                             </div>
                         </div>

@@ -12,7 +12,7 @@
                                 compassionate manner.</p>
                         </div>
                         <div class="banner-btn wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.5s">
-                            <a href="contact.html" class="sec-btn" title="Contact Us">Contact Us</a>
+                            <a href="#contact" class="sec-btn" title="Contact Us">Contact Us</a>
                         </div>
                     </div>
                 </div>
