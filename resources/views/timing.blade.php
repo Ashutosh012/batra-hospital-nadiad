@@ -8,7 +8,7 @@
                             <div class="left-content">
                                 <div class="title-wp">
                                     <span class="icon">
-                                        <img src="assets/images/ambulance-icon.svg" width="45" height="35"
+                                        <img src="{{ asset('assets/images/ambulance-icon.svg') }}" width="45" height="35"
                                             alt="ambulance-icon">
                                     </span>
                                     <div class="text">
@@ -28,7 +28,7 @@
                             <div class="right-content">
                                 <div class="title-wp">
                                     <span class="icon">
-                                        <img src="assets/images/clock-icon.svg" width="34" height="34"
+                                        <img src="{{ asset('assets/images/clock-icon.svg') }}" width="34" height="34"
                                             alt="ambulance-icon">
                                     </span>
                                     <div class="text">

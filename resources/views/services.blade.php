@@ -23,7 +23,7 @@
                                 </span>
                                 <div class="service-card">
                                     <div class="service-card-title">
-                                        <div class="icon"> <img src="assets/images/file-icon.svg" width="46" height="52"
+                                        <div class="icon"> <img src="{{ asset('assets/images/file-icon.svg') }}" width="46" height="52"
                                                 alt="file-icon"></div>
                                         <div class="text">
                                             <h4 class="h4-title">Pediatric Clinic</h4>
@@ -51,7 +51,7 @@
                                 </span>
                                 <div class="service-card">
                                     <div class="service-card-title">
-                                        <div class="icon"> <img src="assets/images/dental-icon.svg" width="33"
+                                        <div class="icon"> <img src="{{ asset('assets/images/dental-icon.svg') }}" width="33"
                                                 height="50" alt="dental-icon"></div>
                                         <div class="text">
                                             <h4 class="h4-title">Dental Service</h4>
@@ -80,7 +80,7 @@
                                 </span>
                                 <div class="service-card">
                                     <div class="service-card-title">
-                                        <div class="icon"> <img src="assets/images/heart-surgery-icon.svg" width="58"
+                                        <div class="icon"> <img src="{{ asset('assets/images/heart-surgery-icon.svg') }} " width="58"
                                                 height="50" alt="heart-surgery-icon"></div>
                                         <div class="text">
                                             <h4 class="h4-title">general surgery</h4>
@@ -109,7 +109,7 @@
                                 </span>
                                 <div class="service-card">
                                     <div class="service-card-title">
-                                        <div class="icon"> <img src="assets/images/ear-icon.svg" width="33" height="50"
+                                        <div class="icon"> <img src="{{ asset('assets/images/ear-icon.svg') }}" width="33" height="50"
                                                 alt="file-icon"></div>
                                         <div class="text">
                                             <h4 class="h4-title">Cardiology</h4>
@@ -137,7 +137,7 @@
                                 </span>
                                 <div class="service-card">
                                     <div class="service-card-title">
-                                        <div class="icon"> <img src="assets/images/eye-icon.svg" width="50" height="33"
+                                        <div class="icon"> <img src="{{ asset('assets/images/eye-icon.svg') }} " width="50" height="33"
                                                 alt="eye-icon"></div>
                                         <div class="text">
                                             <h4 class="h4-title">general surgery</h4>
@@ -164,7 +164,7 @@
                                 </span>
                                 <div class="service-card">
                                     <div class="service-card-title">
-                                        <div class="icon"> <img src="assets/images/file-icon.svg" width="46" height="52"
+                                        <div class="icon"> <img src="{{ asset('assets/images/file-icon.svg') }}" width="46" height="52"
                                                 alt="file-icon"></div>
                                         <div class="text">
                                             <h4 class="h4-title">Pediatric Clinic</h4>

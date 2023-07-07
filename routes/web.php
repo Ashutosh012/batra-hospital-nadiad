@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppointmentController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,9 @@ Route::controller(AppointmentController::class)->group(function(){
     Route::post('verify-otp', 'verifyOtp')->name('verify-otp');
     Route::post('verify-user', 'getOtp')->name('verify-user');
     Route::post('book-appointment', 'bookAppointment')->name('book-appointment');
+});
+
+Route::controller(BlogController::class)->group(function(){
+    Route::get('/blogs/{slug}', 'showBlogDetail')->name('blog-detail');
+    Route::get('/b/blog-list', 'blogList')->name('blog-list');
 });

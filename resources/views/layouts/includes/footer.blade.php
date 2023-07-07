@@ -1,5 +1,5 @@
 <!-- FOOTER START -->
-    <footer>
+    <footer id="contact">
         <div class="top-footer">
             <div class="sec-wp">
                 <div class="container">
@@ -8,7 +8,7 @@
                             <div class="footer-contact-info">
                                 <div class="footer-site-logo">
                                     <a href="/">
-                                        <img width="241" height="50" src="assets/images/site-logo.png" alt="site-logo">
+                                        <img width="241" height="50" src="{{ asset('assets/images/site-logo.png') }}" alt="site-logo">
                                     </a>
                                 </div>
                                 <div class="contact-box">
@@ -95,13 +95,13 @@
                                         <div class="footer-link-list">
                                             <ul>
                                                 <li><a href="javascript:void(0)" title="instagram"><img
-                                                            src="assets/images/instagram-icon.svg" width="26"
+                                                            src="{{ asset('assets/images/instagram-icon.svg') }}" width="26"
                                                             height="26" alt="instagram-icon"></a></li>
                                                 <li><a href="javascript:void(0)" title="twitter"><img
-                                                            src="assets/images/twitter-icon.svg" width="26" height="26"
+                                                            src="{{ asset('assets/images/twitter-icon.svg') }}" width="26" height="26"
                                                             alt="twitter-icon"></a></li>
                                                 <li><a href="javascript:void(0)" title="facebook"><img
-                                                            src="assets/images/facebook-icon.svg" width="17" height="26"
+                                                            src="{{ asset('assets/images/facebook-icon.svg') }}" width="17" height="26"
                                                             alt="facebook-icon"></a></li>
 
                                             </ul>
