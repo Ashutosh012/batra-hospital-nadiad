@@ -34,7 +34,7 @@
                                 </div>
                             @endforeach
                             <div class="blog-btn-wp">
-                                <a href="blog-list.html" class="sec-btn" title="View All">View All</a>
+                                <a href="{{ route('blog-list') }}" class="sec-btn" title="View All">View All</a>
                             </div>
                         </div>
                     </div>

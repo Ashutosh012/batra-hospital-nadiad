@@ -14,7 +14,7 @@
                             <div class="breadcreumb">
                                 <ul>
                                     <li>
-                                        <a href="index-2.html" title="Home">Home</a>
+                                        <a href="/" title="Home">Home</a>
                                     </li>
                                     <li>Blogs</li>
                                 </ul>

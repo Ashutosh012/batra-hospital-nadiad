@@ -153,6 +153,7 @@
 </div>
 <!-- Scroll to top End -->
 
+{!! RecaptchaV3::initJs() !!}
 <!-- JQUERY JS -->
 <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
 

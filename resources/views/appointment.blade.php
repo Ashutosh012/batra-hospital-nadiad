@@ -37,12 +37,12 @@
                                                 be sent
                                                 to this email address.</div>
                                             <div class="row">
-                                                <div class="col-lg-9">
+                                                <!-- <div class="col-lg-9"> -->
                                                     <input type="text" id="email" name="email"
                                                         placeholder="Email Address">
-                                                </div>
+                                                <!-- </div> -->
 
-                                                <div class="col-lg-3">
+                                                <!-- <div class="col-lg-3">
                                                     <button id="verifyUser" class="sec-btn solid-btn"
                                                         title="Verify"><span>Verify</span>Verify</button>
                                                 </div>
@@ -54,7 +54,7 @@
                                                         <button id="submitOTP" class="sec-btn solid-btn"
                                                             title="Submit"><span>Submit</span>Submit</button>
                                                     </div>              
-                                                </div>
+                                                </div> -->
                                                 
                                                 
                                             </div>
@@ -64,10 +64,10 @@
                                         <div class="wpcf7-form-control-wrap">
                                             <label for="mobile-no">Mobile Number</label>
                                             <div class="row">
-                                                <div class="col-lg-9">
+                                                <!-- <div class="col-lg-9"> -->
                                                     <input type="text" id="mobile_number" name="mobile_number"
                                                         placeholder="Mobile Number">
-                                                </div>
+                                                <!-- </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -88,6 +88,10 @@
                                             <label for="datepicker">Take Appointment for Doctor</label>
                                             <input type="datetime-local" id="datepicker" placeholder="YYYY/MM/DD" name="appointment_date">
                                         </span>
+                                    </div>
+
+                                     <div class="form-group">
+                                        <input type="hidden" name="g-recaptcha-response" id="recaptcha">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
@@ -112,7 +116,17 @@
     </section>
     <!-- APPOINTMENT END -->
 
-    
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('recaptchav3.sitekey') }}"></script>
+    <script>
+             grecaptcha.ready(function() {
+                 grecaptcha.execute('{{ config('recaptchav3.sitekey') }}', {action: 'book-appointment'}).then(function(token) {
+                    if (token) {
+                      document.getElementById('recaptcha').value = token;
+                    }
+                 });
+             });
+    </script>
+
     <script type="text/javascript">
 
         $(document).ready(function(){

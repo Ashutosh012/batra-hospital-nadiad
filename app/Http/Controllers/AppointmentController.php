@@ -24,7 +24,8 @@ class AppointmentController extends Controller
             'email' => 'required|email:rfc,dns|unique:App\Models\Appointments,email|max:255',
             'mobile_number' => 'required|unique:appointments,mobile_number|max:255',
             'health_problem_id' => 'required',
-            'appointment_date' => 'required|date'
+            'appointment_date' => 'required|date',
+            'g-recaptcha-response' => 'required'
         ]);
 
         if($validateData->fails()){
