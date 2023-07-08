@@ -52,13 +52,14 @@
 	                                </div>
 	                                <div class="blog-card-date">
 	                                    <div class="date">
-	                                        <h6 class="h6-title">{{ $post->published_at }}</h6>
+	                                        <h6 class="h6-title">{{ Carbon\Carbon::parse($post->published_at)->format('Y M d') }}</h6>
 	                                    </div>
 	                                    <div class="author">
 	                                        <h6 class="h6-title">-{{ $post->author->name }}</h6>
 	                                    </div>
 	                                </div>
-	                                <a href="{{ $post->slug }}" class="icon-wp">
+
+	                                <a href="{{ config('app.url')}}/{{ $post->slug }}" class="icon-wp">
 	                                    <span class="icon"></span>
 	                                </a>
 	                            </div>

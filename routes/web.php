@@ -26,6 +26,6 @@ Route::controller(AppointmentController::class)->group(function(){
 });
 
 Route::controller(BlogController::class)->group(function(){
-    Route::get('/blogs/{slug}', 'showBlogDetail')->name('blog-detail');
+    Route::get('{slug}', 'showBlogDetail')->name('blog-detail');
     Route::get('/b/blog-list', 'blogList')->name('blog-list');
 });

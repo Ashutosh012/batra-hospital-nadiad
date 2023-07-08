@@ -45,7 +45,7 @@
                                         <img src="assets/images/calendar.png" alt="calendar-icon" width="60"
                                             height="60">
                                     </div>
-                                    {{ $post->published_at }}
+                                    {{ Carbon\Carbon::parse($post->published_at)->format('Y M d') }}
                                 </div>
                                 <div class="author">
                                     <div class="icon">
@@ -92,7 +92,7 @@
 
                                     <div class="small-feed-card-content">
                                         <div class="small-feed-author">
-                                            <span>{{ $relatedPost->published_at }}</span>
+                                            <span>{{ Carbon\Carbon::parse($relatedPost->published_at)->format('Y M d') }}</span>
                                             <span>-{{ $relatedPost->author->name }}</span>
                                         </div>
                                         <div class="title">
@@ -122,69 +122,29 @@
                             <h3 class="h3-title">Related Blogs</h3>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="small-feed-card">
-                            <div class="small-feed-card-img">
-                                <div class="back-img" style="background-image: url(assets/images/cardiology.jpg);">
+                    @foreach($relatedPosts as $relatedPost)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="small-feed-card">
+                                <div class="small-feed-card-img">
+                                    <div class="back-img" style="background-image: url(assets/images/cardiology.jpg);">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="small-feed-card-content">
-                                <div class="small-feed-author">
-                                    <span>19 sep, 2022</span>
-                                    <span>-Warren</span>
-                                </div>
-                                <div class="title">
-                                    <a href="#">
-                                        <h4 class="h4-title">We will work with you to develop individualised care
-                                        </h4>
-                                    </a>
+                                <div class="small-feed-card-content">
+                                    <div class="small-feed-author">
+                                        <span>{{ Carbon\Carbon::parse($relatedPost->published_at)->format('Y M d') }}</span>
+                                        <span>-{{ $relatedPost->author->name }}</span>
+                                    </div>
+                                    <div class="title">
+                                        <a href="{{ $post->slug }}">
+                                            <h4 class="h4-title">{{ $relatedPost->title }}
+                                            </h4>
+                                        </a>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="small-feed-card">
-                            <div class="small-feed-card-img">
-                                <div class="back-img" style="background-image: url(assets/images/our-team-bg-img.jpg);">
-                                </div>
-                            </div>
-                            <div class="small-feed-card-content">
-                                <div class="small-feed-author">
-                                    <span>19 sep, 2022</span>
-                                    <span>-Warren</span>
-                                </div>
-                                <div class="title">
-                                    <a href="#">
-                                        <h4 class="h4-title">We will work with you to develop individualised care
-                                        </h4>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="small-feed-card">
-                            <div class="small-feed-card-img">
-                                <div class="back-img" style="background-image: url(assets/images/pediatric.jpg);">
-                                </div>
-                            </div>
-                            <div class="small-feed-card-content">
-                                <div class="small-feed-author">
-                                    <span>19 sep, 2022</span>
-                                    <span>-Warren</span>
-                                </div>
-                                <div class="title">
-                                    <a href="#">
-                                        <h4 class="h4-title">We will work with you to develop individualised care
-                                        </h4>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
