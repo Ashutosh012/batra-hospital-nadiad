@@ -17,7 +17,12 @@
                 </div>
                 <div class="row">
                     
-                    <div class="col-lg-4 col-md-6">
+                    <!-- TODO : Once this section will dynamic, add one 
+                        condition that if there are more than 4 services
+                        add col-lg-4 class -->
+
+
+                    <div class="col-md-6">
                         <div class="service-card-wp-main">
                             <div class="service-card-wp">
                                 <span class="su_button_circle">
@@ -46,7 +51,7 @@
 
 
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-md-6">
                         <div class="service-card-wp-main">
                             <div class="service-card-wp">
                                 <span class="su_button_circle">
@@ -75,7 +80,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-md-6">
                         <div class="service-card-wp-main">
                             <div class="service-card-wp">
                                 <span class="su_button_circle">
@@ -85,7 +90,7 @@
                                         <div class="icon"> <img src="{{ asset('assets/images/ear-icon.svg') }}" width="33" height="50"
                                                 alt="file-icon"></div>
                                         <div class="text">
-                                            <h4 class="h4-title">Gaynecology Services</h4>
+                                            <h4 class="h4-title">Gynaecology Services</h4>
                                         </div>
                                     </div>
                                     <div class="service-card-desc">
@@ -103,7 +108,7 @@
                         </div>
 
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-md-6">
                         <div class="service-card-wp-main">
                             <div class="service-card-wp">
                                 <span class="su_button_circle">
