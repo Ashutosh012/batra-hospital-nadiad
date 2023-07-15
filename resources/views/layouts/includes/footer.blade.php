@@ -51,15 +51,15 @@
                                         </div>
                                         <div class="footer-link-list">
                                             <ul>
-                                                <li><a href="#about" title="about">About</a>
-                                                </li>
-                                                <li><a href="#facility" title="Our Facilities">Our
-                                                        Facilities</a></li>
-                                                <li><a href="#appointment" title="Make Appointment!">Make
+                                                <!-- <li><a href="#about" title="about">About</a>
+                                                </li> -->
+                                                <!-- <li><a href="#facility" title="Our Facilities">Our
+                                                        Facilities</a></li> -->
+                                                <li><a href="/c/contact/#appointment" title="Make Appointment!">Make
                                                         Appointment</a></li>
-                                                <li><a href="#team" title="Our Team">Our
-                                                        Team</a></li>
-                                                <li><a href="#" title="contact us">Contact Us</a>
+                                                <!-- <li><a href="#team" title="Our Team">Our
+                                                        Team</a></li> -->
+                                                <li><a href="/c/contact/#location" title="contact us">Contact Us</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -71,19 +71,16 @@
                                         <div class="footer-link-list">
                                             <ul>
                                                 <li>
-                                                    <a href="#" title="dental service">Dental
-                                                        Service</a>
+                                                    <a href="#" title="Maternity Services">Maternity Services</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" title="pediatric clinic">pediatric
-                                                        clinic</a>
+                                                    <a href="#" title="Fetal Medicine Services">Fetal Medicine Services</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" title="General Surgery">general
-                                                        surgery</a>
+                                                    <a href="#" title="Gaynecology Services">Gaynecology Services</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#" title="cardiology">Cardiology</a>
+                                                    <a href="#" title="Urogynecology">Urogynecology</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -154,8 +151,6 @@
 <!-- Scroll to top End -->
 
 {!! RecaptchaV3::initJs() !!}
-<!-- JQUERY JS -->
-<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 

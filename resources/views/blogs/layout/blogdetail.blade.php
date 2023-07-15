@@ -8,6 +8,7 @@
     <title>Batra Hospital Nadiad</title>
 
     <!-- <link rel="icon" type="image/jpg" href="assets/images/Favicon.html"> -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
 
     <!-- GOOGLE FONTS CSS -->
     <link

@@ -18,7 +18,7 @@ class AppointmentsSeeder extends Seeder
             'last_name' => 'Batra',
             'email' => 'ashutoshbatra012@gmail.com',
             'mobile_number' => '9979297492',
-            'health_problem_id' => 2,
+            'health_problem' => 'Maternity Issues',
             'appointment_date' => '2023-06-24 12:43:59'
         ]);
     }

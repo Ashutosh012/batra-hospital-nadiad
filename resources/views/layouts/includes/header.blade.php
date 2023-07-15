@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="site-branding">
-                    <a href="/" class="custom-logo-link" rel="home" title="Medicare">
+                    <a href="/" class="custom-logo-link" rel="home">
                         <img width="241" height="50" src="{{ asset('assets/images/site-logo.png') }}" alt="site-logo">
                     </a>
                 </div>
@@ -22,16 +22,15 @@
                             <div class="menu-menu-1-container">
                                 <ul id="primary-menu" class="menu nav-menu">
                                     <li class="active"><a href="/" title="Home">Home</a></li>
-                                    <li><a href="#about" title="About">about</a></li>
                                     <li class="dropdown-items">
                                         <a href="#blogs">Blogs <span><i class="fas fa-angle-down"></i></span></a>
                                         <ul>
                                             <li>
-                                                <a href="{{ route('blog-list') }}" title="Blog List">Blog List</a>
+                                                <a class="list-items" href="{{ route('blog-list') }}" title="Blog List">Blog List</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="#contact" title="Contact">Contact</a></li>
+                                    <li><a href="{{ url('/c/contact') }}" title="Contact">Contact</a></li>
                                 </ul>
                             </div>
                         </div>

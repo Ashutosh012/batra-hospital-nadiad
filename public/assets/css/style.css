@@ -30,14 +30,17 @@ Theme Version: 1.0.0
 
 /*==========Common CSS Start ==========*/
 :root {
-  --primary-color: #00a3c8;
+  --primary-color: #F94BA4;
   --dark-color: #011638;
   --common-color: #777777;
   --light-blue-color: #caf0f8;
+  --light-pink-color: #FFB6C1;
   --white-color: #ffffff;
   --black-color: #000000;
   --red-color: #ff0000;
   --input-color: #555555;
+  --dark-pink-color: #460923;
+  --purple-color:  #460923;
   --gradient-color: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
   --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
   --body-font: "Open Sans";
@@ -129,7 +132,7 @@ a:hover {
 }
 
 .h1-title {
-  font-size: 84px;
+  font-size: 60px;
   line-height: 1.3;
   font-weight: bold;
   color: var(--dark-color);
@@ -492,12 +495,16 @@ img {
   height: 100%;
 }
 
+.main-navigation a.list-items {
+  color: var(--black-color);
+}
+
 .main-navigation a {
   position: relative;
   height: 100%;
   display: flex;
   align-items: center;
-  color: var(--black-color);
+  color: var(--white-color);
   font-size: 20px;
   line-height: 26px;
   text-transform: capitalize;
@@ -606,6 +613,10 @@ select.form-input {
 .white-text label,
 .white-text span:not(.wpcf7-form-control-wrap) {
   color: var(--white-color);
+}
+
+.white-text h1 {
+  color: var(--primary-color) !important;
 }
 
 /*==========Common CSS End==========*/
@@ -787,7 +798,7 @@ select.form-input {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--white-color);
+  background: var(--purple-color);
   width: 100%;
   transition: 0.3s;
   position: fixed;
@@ -929,7 +940,7 @@ select.form-input {
 
 .main-banner {
   position: relative;
-  background: var(--light-blue-color);
+  background: var(--light-pink-color);
   padding: 200px 0 230px 0;
 }
 
@@ -972,13 +983,21 @@ select.form-input {
   align-items: start;
   justify-content: space-between;
   padding: 50px 100px 50px 100px;
-  background: linear-gradient(290deg, var(--light-blue-color), var(--white-color));
+  background: linear-gradient(290deg, var(--light-pink-color), var(--white-color));
   border-radius: 30px;
 }
 
-.main-timing {
+.main-timing-2 {
   position: relative;
-  margin-top: -120px;
+  margin-top: 60px;
+}
+
+.main-timing{
+  position: relative;
+  background: var(--dark-pink-color);
+  padding: 364px 0 62px 0;
+  margin-top: -220px;
+  z-index: 1;
 }
 
 .timing-content .title-wp {
@@ -1074,8 +1093,8 @@ select.form-input {
 
 .main-service {
   position: relative;
-  background: var(--dark-color);
-  padding: 312px 0 62px 0;
+  background: var(--dark-pink-color);
+  padding: 100px 0 62px 0;
   margin-top: -220px;
   z-index: 1;
 }
@@ -1100,14 +1119,14 @@ select.form-input {
 }
 
 .service-card-wp {
-  background: rgb(202 240 248);
+  background: var(--light-pink-color);
   z-index: 100000;
   display: inline-block;
   width: 100%;
 }
 
 .service-card-wp-main:hover {
-  border-top: 5px solid var(--light-blue-color);
+  border-top: 5px solid var(--light-pink-color);
 }
 
 .service-card-wp-main:hover .service-card-title img {
@@ -1402,7 +1421,7 @@ select.form-input {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: linear-gradient(176deg, #caf0f8, #ffffff);
+  background: linear-gradient(176deg, #FFB6C1, #ffffff);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1437,7 +1456,7 @@ select.form-input {
   width: 100%;
   top: 0px;
   left: 0px;
-  background-color: var(--dark-color);
+  background-color: var(--dark-pink-color);
   opacity: 0.92;
 }
 
@@ -1452,7 +1471,7 @@ select.form-input {
   -webkit-mask-box-image: url(../images/card-shape.svg);
   background-position: center;
   z-index: -1;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(202, 240, 248, 1) 40%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 182, 193, 1) 40%);
   box-shadow: 12px 12px 40px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -1463,7 +1482,7 @@ select.form-input {
   left: 0;
   height: 3108px;
   width: 100%;
-  background: radial-gradient(rgb(0 191 219), rgb(255 255 255 / 0));
+  background: radial-gradient(rgb(255 182 193), rgb(255 255 255 / 0));
   z-index: 0;
 }
 
@@ -1686,7 +1705,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 100%;
   top: 0px;
   left: 0px;
-  background: linear-gradient(272deg, rgba(255, 255, 255, 1) 0%, rgba(202, 240, 248, 1) 100%);
+  background: linear-gradient(272deg, rgba(255, 255, 255, 1) 0%, rgba(255, 182, 193, 1) 100%);
   z-index: 0;
 }
 
@@ -1847,7 +1866,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: calc(100vw - 160px);
   border-radius: 40px;
   height: 100%;
-  background: var(--light-blue-color);
+  background: var(--light-pink-color);
 }
 
 .slick-arrow:hover:before {
@@ -2104,7 +2123,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .blog-card {
   height: 240px;
-  background: var(--light-blue-color);
+  background: var(--light-pink-color);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -2193,7 +2212,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .blog-wp .blog-card:nth-child(2n-2) .icon-wp {
-  background: var(--dark-color);
+  background: var(--dark-pink-color);
 }
 
 .blog-feed-img-wp {
@@ -2465,7 +2484,7 @@ textarea.form-input {
 
 .top-footer {
   position: relative;
-  background: var(--dark-color);
+  background: var(--dark-pink-color);
   padding: 100px 0 100px 0;
 }
 
@@ -2519,7 +2538,7 @@ textarea.form-input {
   left: 0;
   height: 100%;
   width: 45%;
-  background: var(--light-blue-color);
+  background: var(--light-pink-color);
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;
 }
@@ -2630,7 +2649,7 @@ textarea.form-input {
 }
 
 .su_button_circle {
-  background-color: red;
+  background-color: var(--primary-color);
   border-radius: 1000px;
   position: absolute;
   left: 0;
@@ -2656,7 +2675,7 @@ textarea.form-input {
     height: 0px;
     margin-left: 0px;
     margin-top: 0px;
-    background-color: rgba(42, 53, 80, 0.2);
+    /*background-color: rgba(42, 53, 80, 0.2);*/
   }
 
   100% {
@@ -2664,7 +2683,7 @@ textarea.form-input {
     height: 1100px;
     margin-left: -550px;
     margin-top: -550px;
-    background-color: rgb(0 163 200 /100%);
+    /*background-color: rgb(0 163 200 /100%);*/
   }
 }
 
@@ -2674,7 +2693,7 @@ textarea.form-input {
     height: 1100px;
     margin-left: -550px;
     margin-top: -550px;
-    background-color: rgb(0 163 200 / 100%);
+    /*background-color: rgb(0 163 200 / 100%);*/
   }
 
   100% {
@@ -2682,7 +2701,7 @@ textarea.form-input {
     height: 0px;
     margin-left: 0px;
     margin-top: 0px;
-    background-color: rgb(0 163 200 / 100%);
+    /*background-color: rgb(0 163 200 / 100%);*/
   }
 }
 
@@ -2828,7 +2847,7 @@ textarea.form-input {
   width: 100%;
   top: 0px;
   left: 0px;
-  background-color: var(--dark-color);
+  background-color: var(--dark-pink-color);
   opacity: 0.9;
   z-index: -1;
 }
@@ -3051,7 +3070,7 @@ textarea.form-input {
   right: 0;
   height: 100%;
   width: 100%;
-  background: var(--dark-color);
+  background: var(--dark-pink-color);
   z-index: 0;
   opacity: 0.9;
 }
@@ -3318,7 +3337,7 @@ section.main-blog.service-page {
 .main-contact-us {
   position: relative;
   padding: 100px 0 100px 0;
-  background: var(--light-blue-color);
+  background: var(--light-pink-color);
 }
 
 .main-contact-us .contact-form-wp .appointment-form-wp {

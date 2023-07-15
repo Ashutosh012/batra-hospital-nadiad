@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ Route::controller(AppointmentController::class)->group(function(){
     Route::post('book-appointment', 'bookAppointment')->name('book-appointment');
 });
 
-Route::controller(BlogController::class)->group(function(){
-    Route::get('{slug}', 'showBlogDetail')->name('blog-detail');
-    Route::get('/b/blog-list', 'blogList')->name('blog-list');
-});
+Route::get('blog-list', [BlogController::class,'blogList'])->name('blog-list');
+Route::get('/{slug}', [BlogController::class, 'showBlogDetail'])->name('blog-detail');
+
+Route::get('/c/contact', [ContactController::class, 'contactUs'])->name('contact');

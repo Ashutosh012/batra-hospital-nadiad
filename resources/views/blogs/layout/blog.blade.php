@@ -9,6 +9,8 @@
 
     <!-- <link rel="icon" type="image/jpg" href="assets/images/Favicon.html"> -->
 
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
+
     <!-- GOOGLE FONTS CSS -->
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans&amp;family=Open+Sans:wght@300;400&amp;family=Roboto+Slab:wght@400;600;700&amp;display=swap"

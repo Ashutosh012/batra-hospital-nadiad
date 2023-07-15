@@ -9,16 +9,8 @@
 	@include('banner')
 @endsection
 
-@section('timing')
-	@include('timing')
-@endsection
-
 @section('services')
 	@include('services')
-@endsection
-
-@section('about')
-	@include('about')
 @endsection
 
 @section('facilities')
@@ -31,6 +23,10 @@
 
 @section('appointment')
 	@include('appointment')
+@endsection
+
+@section('timing')
+	@include('timing')
 @endsection
 
 @section('review')

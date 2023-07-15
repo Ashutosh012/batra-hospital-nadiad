@@ -30,7 +30,7 @@
                                     <div class="facility-card-content-wp">
                                         <div class="facility-card-content">
                                             <div class="title">
-                                                <h3 class="h3-title">pharmacy</h3>
+                                                <h3 class="h3-title">Maternity OPD</h3>
                                             </div>
                                             <div class="text">
                                                 <p>A well-functioning health system working in harmony is built on
@@ -55,7 +55,7 @@
                                     <div class="facility-card-content-wp">
                                         <div class="facility-card-content">
                                             <div class="title">
-                                                <h3 class="h3-title">Surgery Service</h3>
+                                                <h3 class="h3-title">Surgeries</h3>
                                             </div>
                                             <div class="text">
                                                 <p>A well-functioning health system working in harmony is built on
@@ -79,7 +79,7 @@
                                     <div class="facility-card-content-wp">
                                         <div class="facility-card-content">
                                             <div class="title">
-                                                <h3 class="h3-title">Outdoor Checkup</h3>
+                                                <h3 class="h3-title">Fetal Medicine Services</h3>
                                             </div>
                                             <div class="text">
                                                 <p>A well-functioning health system working in harmony is built on
@@ -105,7 +105,7 @@
                                     <div class="facility-card-content-wp">
                                         <div class="facility-card-content">
                                             <div class="title">
-                                                <h3 class="h3-title">24*7 Ambulance</h3>
+                                                <h3 class="h3-title">Invasive Fetal Procedures</h3>
                                             </div>
                                             <div class="text">
                                                 <p>A well-functioning health system working in harmony is built on
@@ -128,7 +128,7 @@
                                     <div class="facility-card-content-wp">
                                         <div class="facility-card-content">
                                             <div class="title">
-                                                <h3 class="h3-title">Operation Theatre</h3>
+                                                <h3 class="h3-title">Genetic Counseling</h3>
                                             </div>
                                             <div class="text">
                                                 <p>A well-functioning health system working in harmony is built on

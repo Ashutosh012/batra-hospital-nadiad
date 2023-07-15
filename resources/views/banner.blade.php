@@ -6,7 +6,7 @@
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="banner-content">
                         <h1 class="h1-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            Medical & Health Care Solution</h1>
+                            Comprehensive Female Health Solutions Under One Roof</h1>
                         <div class="sub-title wow fadeup-animation" data-wow-duration="0.8s" data-wow-delay="0.4s">
                             <p>Our goal is to deliver quality of care in a courteous, respectful, and
                                 compassionate manner.</p>

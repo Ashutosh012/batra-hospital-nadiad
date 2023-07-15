@@ -16,34 +16,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card-wp-main">
-                            <div class="service-card-wp">
-                                <span class="su_button_circle">
-                                </span>
-                                <div class="service-card">
-                                    <div class="service-card-title">
-                                        <div class="icon"> <img src="{{ asset('assets/images/file-icon.svg') }}" width="46" height="52"
-                                                alt="file-icon"></div>
-                                        <div class="text">
-                                            <h4 class="h4-title">Pediatric Clinic</h4>
-                                        </div>
-                                    </div>
-                                    <div class="service-card-desc">
-                                        <p>Care for those with allergies, asthma and immunodeficiency control your
-                                            symptoms and improve your quality of life. Our team of experts focuses on
-                                            the diagnosis.</p>
-                                    </div>
-                                    <div class="read-more-wp">
-                                        <a href="#" title="know more">Know
-                                            More</a>
-                                        <span><i class="fas fa-arrow-right"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    
                     <div class="col-lg-4 col-md-6">
                         <div class="service-card-wp-main">
                             <div class="service-card-wp">
@@ -54,7 +27,7 @@
                                         <div class="icon"> <img src="{{ asset('assets/images/dental-icon.svg') }}" width="33"
                                                 height="50" alt="dental-icon"></div>
                                         <div class="text">
-                                            <h4 class="h4-title">Dental Service</h4>
+                                            <h4 class="h4-title">Maternity Services</h4>
                                         </div>
                                     </div>
                                     <div class="service-card-desc">
@@ -83,7 +56,7 @@
                                         <div class="icon"> <img src="{{ asset('assets/images/heart-surgery-icon.svg') }} " width="58"
                                                 height="50" alt="heart-surgery-icon"></div>
                                         <div class="text">
-                                            <h4 class="h4-title">general surgery</h4>
+                                            <h4 class="h4-title">Fetal Medicine Services</h4>
                                         </div>
                                     </div>
                                     <div class="service-card-desc">
@@ -112,7 +85,7 @@
                                         <div class="icon"> <img src="{{ asset('assets/images/ear-icon.svg') }}" width="33" height="50"
                                                 alt="file-icon"></div>
                                         <div class="text">
-                                            <h4 class="h4-title">Cardiology</h4>
+                                            <h4 class="h4-title">Gaynecology Services</h4>
                                         </div>
                                     </div>
                                     <div class="service-card-desc">
@@ -140,7 +113,7 @@
                                         <div class="icon"> <img src="{{ asset('assets/images/eye-icon.svg') }} " width="50" height="33"
                                                 alt="eye-icon"></div>
                                         <div class="text">
-                                            <h4 class="h4-title">general surgery</h4>
+                                            <h4 class="h4-title">Urogynecology</h4>
                                         </div>
                                     </div>
                                     <div class="service-card-desc">
@@ -156,34 +129,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-card-wp-main">
-                            <div class="service-card-wp">
-                                <span class="su_button_circle">
-                                </span>
-                                <div class="service-card">
-                                    <div class="service-card-title">
-                                        <div class="icon"> <img src="{{ asset('assets/images/file-icon.svg') }}" width="46" height="52"
-                                                alt="file-icon"></div>
-                                        <div class="text">
-                                            <h4 class="h4-title">Pediatric Clinic</h4>
-                                        </div>
-                                    </div>
-                                    <div class="service-card-desc">
-                                        <p>Care for those with allergies, asthma and immunodeficiency control your
-                                            symptoms and improve your quality of life. Our team of experts focuses on
-                                            the diagnosis.</p>
-                                    </div>
-                                    <div class="read-more-wp">
-                                        <a href="#" title="know more">Know
-                                            More</a>
-                                        <span><i class="fas fa-arrow-right"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </div>
