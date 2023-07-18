@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('service_options', function (Blueprint $table) {
+        Schema::create('ourservices', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->string('icon')->nullable();
-            $table->longText('description');
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->text('excerpt')->nullable();
+            $table->string('banner')->nullable();
+            $table->longText('content');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('service_options');
+        Schema::dropIfExists('ourservices');
     }
 };

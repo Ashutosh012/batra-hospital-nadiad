@@ -14,16 +14,11 @@ class Appointments extends Model
         'last_name',
         'email',
         'mobile_number',
-        'health_problem_id',
+        'health_problem',
         'appointment_date'
     ];
 
     protected $casts = [
         'appointment_date' => 'date:hh:mm'
     ];
-
-    public function healthproblems()
-    {
-        return $this->belongsTo(HealthProblems::class, 'health_problem_id');
-    }
 }

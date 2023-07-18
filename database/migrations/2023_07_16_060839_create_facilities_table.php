@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('static_pages', function (Blueprint $table) {
+        Schema::create('facilities', function (Blueprint $table) {
             $table->id();
-            $table->string('page_name');
-            $table->string('page_description');
+            $table->string('name');
+            $table->string('slug')->unique();
+            $table->text('short_description');
+            $table->enum('order', ['1', '2', '3'])->default('1');
+            $table->string('banner');
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('static_pages');
+        Schema::dropIfExists('facilities');
     }
 };

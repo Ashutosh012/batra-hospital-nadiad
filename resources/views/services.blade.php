@@ -16,125 +16,43 @@
                     </div>
                 </div>
                 <div class="row">
+
+                    @php
+                    $services = App\Models\Ourservices::all();
+                    @endphp
+
+                    @foreach($services as $service)
+                        <div class="{{ count($services) > 4 ? 'col-lg-4' : ''}} col-md-6">
+                            <div class="service-card-wp-main">
+                                <div class="service-card-wp">
+                                    <span class="su_button_circle">
+                                    </span>
+                                    <div class="service-card">
+                                        <div class="service-card-title">
+                                            <div class="icon"> 
+                                                <img src="{{ config('app.url') }}/storage/{{ $service->banner }}" width="33"
+                                                    height="50" alt="{{ $service->name }}"></div>
+                                            <div class="text">
+                                                <h4 class="h4-title">{{ $service->name }}</h4>
+                                            </div>
+                                        </div>
+                                        <div class="service-card-desc">
+                                            <p>{{ $service->excerpt }}</p>
+                                        </div>
+                                        <div class="read-more-wp">
+                                            <a href="#" title="know more">Know
+                                                More</a>
+                                            <span><i class="fas fa-arrow-right"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    @endforeach
+
                     
-                    <!-- TODO : Once this section will dynamic, add one 
-                        condition that if there are more than 4 services
-                        add col-lg-4 class -->
-
-
-                    <div class="col-md-6">
-                        <div class="service-card-wp-main">
-                            <div class="service-card-wp">
-                                <span class="su_button_circle">
-                                </span>
-                                <div class="service-card">
-                                    <div class="service-card-title">
-                                        <div class="icon"> <img src="{{ asset('assets/images/dental-icon.svg') }}" width="33"
-                                                height="50" alt="dental-icon"></div>
-                                        <div class="text">
-                                            <h4 class="h4-title">Maternity Services</h4>
-                                        </div>
-                                    </div>
-                                    <div class="service-card-desc">
-                                        <p>Care for those with allergies, asthma and immunodeficiency control your
-                                            symptoms and improve your quality of life. Our team of experts focuses on
-                                            the diagnosis.</p>
-                                    </div>
-                                    <div class="read-more-wp">
-                                        <a href="#" title="know more">Know
-                                            More</a>
-                                        <span><i class="fas fa-arrow-right"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="service-card-wp-main">
-                            <div class="service-card-wp">
-                                <span class="su_button_circle">
-                                </span>
-                                <div class="service-card">
-                                    <div class="service-card-title">
-                                        <div class="icon"> <img src="{{ asset('assets/images/heart-surgery-icon.svg') }} " width="58"
-                                                height="50" alt="heart-surgery-icon"></div>
-                                        <div class="text">
-                                            <h4 class="h4-title">Fetal Medicine Services</h4>
-                                        </div>
-                                    </div>
-                                    <div class="service-card-desc">
-                                        <p>Care for those with allergies, asthma and immunodeficiency control your
-                                            symptoms and improve your quality of life. Our team of experts focuses on
-                                            the diagnosis.</p>
-                                    </div>
-
-                                    <div class="read-more-wp">
-                                        <a href="#" title="know more">Know
-                                            More</a>
-                                        <span><i class="fas fa-arrow-right"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="service-card-wp-main">
-                            <div class="service-card-wp">
-                                <span class="su_button_circle">
-                                </span>
-                                <div class="service-card">
-                                    <div class="service-card-title">
-                                        <div class="icon"> <img src="{{ asset('assets/images/ear-icon.svg') }}" width="33" height="50"
-                                                alt="file-icon"></div>
-                                        <div class="text">
-                                            <h4 class="h4-title">Gynaecology Services</h4>
-                                        </div>
-                                    </div>
-                                    <div class="service-card-desc">
-                                        <p>Care for those with allergies, asthma and immunodeficiency control your
-                                            symptoms and improve your quality of life. Our team of experts focuses on
-                                            the diagnosis.</p>
-                                    </div>
-                                    <div class="read-more-wp">
-                                        <a href="#" title="know more">Know
-                                            More</a>
-                                        <span><i class="fas fa-arrow-right"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="service-card-wp-main">
-                            <div class="service-card-wp">
-                                <span class="su_button_circle">
-                                </span>
-                                <div class="service-card">
-                                    <div class="service-card-title">
-                                        <div class="icon"> <img src="{{ asset('assets/images/eye-icon.svg') }} " width="50" height="33"
-                                                alt="eye-icon"></div>
-                                        <div class="text">
-                                            <h4 class="h4-title">Urogynecology</h4>
-                                        </div>
-                                    </div>
-                                    <div class="service-card-desc">
-                                        <p>Care for those with allergies, asthma and immunodeficiency control your
-                                            symptoms and improve your quality of life. Our team of experts focuses on
-                                            the diagnosis.</p>
-                                    </div>
-                                    <div class="read-more-wp">
-                                        <a href="#" title="know more">Know
-                                            More</a>
-                                        <span><i class="fas fa-arrow-right"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

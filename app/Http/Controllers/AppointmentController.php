@@ -23,7 +23,7 @@ class AppointmentController extends Controller
             'last_name' => 'required',
             'email' => 'required|email:rfc,dns|unique:App\Models\Appointments,email|max:255',
             'mobile_number' => 'required|unique:appointments,mobile_number|max:255',
-            'health_problem_id' => 'required',
+            'health_problem' => 'required',
             'appointment_date' => 'required|date',
             'g-recaptcha-response' => 'required'
         ]);
@@ -39,7 +39,7 @@ class AppointmentController extends Controller
             'last_name' => $request->last_name,
             'email' => $request->email,
             'mobile_number' => $request->mobile_number,
-            'health_problem_id' => $request->health_problem_id,
+            'health_problem' => $request->health_problem,
             'appointment_date' => $request->appointment_date
         ]);
 

@@ -51,7 +51,7 @@
                                 <p>During pregnancy, various tests and screenings are conducted to ensure the health and well-being of both the mother and the developing baby. One such important screening tool is the Nuchal Translucency (NT) scan. The NT scan is a non-invasive prenatal test that provides valuable information about the risk of certain chromosomal abnormalities in the fetus. In this blog post, we will explore what the NT scan entails, its significance, and what expectant parents should know. </p>
                             </div>
                             <div class="btn-wp">
-                                <a href="http://127.0.0.1:8000/understanding-nt-scan-a-crucial-prenatal-screening-tool" class="sec-btn">Know More</a>
+                                <a href="{{ config('app.url') }}/understanding-nt-scan-a-crucial-prenatal-screening-tool" class="sec-btn">Know More</a>
                             </div>
                         </div>
                     </div>

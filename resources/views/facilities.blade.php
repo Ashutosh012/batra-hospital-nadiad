@@ -1,4 +1,4 @@
-<!-- FACILITY START -->
+<!--FACILITY START -->
     <section id="facility" class="main-facility">
         <div class="sec-wp">
             <div class="container-fluid">
@@ -19,128 +19,92 @@
                         </div>
                         <div class="main-facility-content">
                             <div class="card-row first-row">
+                                @php
+                                $facilities = \App\Models\Facilities::where('order','=', 1)->first();
+                                @endphp
                                 <div class="facility-card text-center wow fadeIn" data-wow-duration="0.8s"
                                     data-wow-delay="0.7s">
                                     <div class="icon-wp">
                                         <div class="icon">
-                                            <img src="assets/images/pharmacy-icon.svg" width="71" height="61"
-                                                alt="pharmacy-icon">
+                                            <img src="{{ config('app.url')}}/storage/{{ $facilities->banner }}" width="71" height="61"
+                                                alt="{{ $facilities->name }}">
                                         </div>
                                     </div>
                                     <div class="facility-card-content-wp">
                                         <div class="facility-card-content">
                                             <div class="title">
-                                                <h3 class="h3-title">Maternity OPD</h3>
+                                                <h3 class="h3-title">{{ $facilities->name }}</h3>
                                             </div>
                                             <div class="text">
-                                                <p>A well-functioning health system working in harmony is built on
-                                                    having trained and motivated health workers</p>
+                                                <p>{{ $facilities->short_description }}</p>
                                             </div>
-                                            <div class="number for-des">
+                                            <!-- <div class="number for-des">
                                                 <span>3</span>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-row second-row">
-                                <div class="facility-card text-center wow fadeIn" data-wow-duration="0.8s"
-                                    data-wow-delay="0.6s">
-                                    <div class="icon-wp">
-                                        <div class="icon">
-                                            <img src="assets/images/surgery-icon.svg" width="69" height="65"
-                                                alt="surgery-icon">
-                                        </div>
-                                    </div>
-                                    <div class="facility-card-content-wp">
-                                        <div class="facility-card-content">
-                                            <div class="title">
-                                                <h3 class="h3-title">Surgeries</h3>
-                                            </div>
-                                            <div class="text">
-                                                <p>A well-functioning health system working in harmony is built on
-                                                    having trained and motivated health workers</p>
-                                            </div>
-                                            <div class="number for-des">
-                                                <span>2</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                @php
+                                $facilities = \App\Models\Facilities::where('order','=', 2)->get();
+                                @endphp
 
-                                </div>
-                                <div class="facility-card text-center wow fadeIn" data-wow-duration="0.8s"
-                                    data-wow-delay="0.8s">
-                                    <div class="icon-wp">
-                                        <div class="icon">
-                                            <img src="assets/images/file-icon.svg" width="71" height="80"
-                                                alt="file-icon">
-                                        </div>
-                                    </div>
-                                    <div class="facility-card-content-wp">
-                                        <div class="facility-card-content">
-                                            <div class="title">
-                                                <h3 class="h3-title">Fetal Medicine Services</h3>
-                                            </div>
-                                            <div class="text">
-                                                <p>A well-functioning health system working in harmony is built on
-                                                    having trained and motivated health workers</p>
-                                            </div>
-                                            <div class="number for-des">
-                                                <span>4</span>
+                                @foreach($facilities as $facility)
+                                    <div class="facility-card text-center wow fadeIn" data-wow-duration="0.8s"
+                                        data-wow-delay="0.6s">
+                                        <div class="icon-wp">
+                                            <div class="icon">
+                                                <img src="{{ config('app.url')}}/storage/{{ $facility->banner }}" width="69" height="65"
+                                                    alt="{{ $facility->name }}">
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="facility-card-content-wp">
+                                            <div class="facility-card-content">
+                                                <div class="title">
+                                                    <h3 class="h3-title">{{ $facility->name }}</h3>
+                                                </div>
+                                                <div class="text">
+                                                    <p>{{ $facility->short_description }}</p>
+                                                </div>
+                                                <!-- <div class="number for-des">
+                                                    <span>2</span>
+                                                </div> -->
+                                            </div>
+                                        </div>
 
-                                </div>
+                                    </div>
+                                @endforeach
                             </div>
                             <div class="card-row third-row">
-                                <div class="facility-card text-center wow fadeIn" data-wow-duration="0.8s"
-                                    data-wow-delay="0.5s">
-                                    <div class="icon-wp">
-                                        <div class="icon">
-                                            <img src="assets/images/ambulance-icon.svg" width="51" height="35"
-                                                alt="ambulance-icon">
-                                        </div>
-                                    </div>
-                                    <div class="facility-card-content-wp">
-                                        <div class="facility-card-content">
-                                            <div class="title">
-                                                <h3 class="h3-title">Invasive Fetal Procedures</h3>
-                                            </div>
-                                            <div class="text">
-                                                <p>A well-functioning health system working in harmony is built on
-                                                    having trained and motivated health workers</p>
-                                            </div>
-                                            <div class="number for-des">
-                                                <span>1</span>
+                                @php
+                                $facilities = \App\Models\Facilities::where('order','=', 3)->get();
+                                @endphp
+                                @foreach($facilities as $facility)
+                                    <div class="facility-card text-center wow fadeIn" data-wow-duration="0.8s"
+                                        data-wow-delay="0.6s">
+                                        <div class="icon-wp">
+                                            <div class="icon">
+                                                <img src="{{ config('app.url')}}/storage/{{ $facility->banner }}" width="69" height="65"
+                                                    alt="{{ $facility->name }}">
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="facility-card-content-wp">
+                                            <div class="facility-card-content">
+                                                <div class="title">
+                                                    <h3 class="h3-title">{{ $facility->name }}</h3>
+                                                </div>
+                                                <div class="text">
+                                                    <p>{{ $facility->short_description }}</p>
+                                                </div>
+                                                <!-- <div class="number for-des">
+                                                    <span>2</span>
+                                                </div> -->
+                                            </div>
+                                        </div>
 
-                                </div>
-                                <div class="facility-card text-center wow fadeIn" data-wow-duration="0.8s"
-                                    data-wow-delay="0.9s">
-                                    <div class="icon-wp">
-                                        <div class="icon">
-                                            <img src="assets/images/ot-icon.svg" width="72" height="56" alt="ot-icon">
-                                        </div>
                                     </div>
-                                    <div class="facility-card-content-wp">
-                                        <div class="facility-card-content">
-                                            <div class="title">
-                                                <h3 class="h3-title">Genetic Counseling</h3>
-                                            </div>
-                                            <div class="text">
-                                                <p>A well-functioning health system working in harmony is built on
-                                                    having trained and motivated health workers</p>
-                                            </div>
-                                            <div class="number for-des">
-                                                <span>5</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                @endforeach
                             </div>
                             <div class="facility-img-wp for-des">
                                 <div class="back-img"
