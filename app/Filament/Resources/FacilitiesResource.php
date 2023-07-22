@@ -19,7 +19,7 @@ class FacilitiesResource extends Resource
 
     protected static ?string $navigationGroup = 'Facilities';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-shield-check';
 
     public static function form(Form $form): Form
     {

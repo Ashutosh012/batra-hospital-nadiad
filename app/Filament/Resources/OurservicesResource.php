@@ -19,7 +19,7 @@ class OurservicesResource extends Resource
 
     protected static ?string $navigationGroup = 'Our Services';
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-pencil';
 
     public static function form(Form $form): Form
     {

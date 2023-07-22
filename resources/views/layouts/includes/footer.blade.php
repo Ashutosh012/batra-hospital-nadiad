@@ -11,13 +11,19 @@
                                         <img width="241" height="50" src="{{ asset('assets/images/site-logo.png') }}" alt="site-logo">
                                     </a>
                                 </div>
+                                @php
+                                $hospital_details = \App\Models\HospitalDetails::where('id',1)->first();
+                                $hospital_address = $hospital_details->address;
+                                $hospital_helpline = $hospital_details->helpline_number;
+                                $hospital_maplink = $hospital_details->map_link;
+                                @endphp
                                 <div class="contact-box">
                                     <h4 class="h4-title">Address</h4>
-                                    <a href="https://goo.gl/maps/4RYuK2T3wbpMc4Hn6">1st floor, Kant Arcade, Piplag Chokdi, Nadiad- 387001</a>
+                                    <a href="{{ $hospital_maplink }}" target="_blank">{{ $hospital_address }}</a>
                                 </div>
                                 <div class="contact-box">
                                     <h4 class="h4-title">Our Helpline Number</h4>
-                                    <a href="tel:9101339671">Call : +91 9101339671</a>
+                                    <a href="tel:{{ $hospital_helpline }}">Call : {{ $hospital_helpline }}</a>
                                 </div>
                                 <div class="contact-box">
                                     <h4 class="h4-title">Opening Hours</h4>
@@ -91,7 +97,18 @@
                                         </div>
                                         <div class="footer-link-list">
                                             <ul>
-                                                <li><a href="javascript:void(0)" title="instagram"><img
+                                                @php
+                                                    $socialmedia_links = \App\Models\SocialMedia::all();
+                                                @endphp
+
+                                                @foreach($socialmedia_links as $link)
+                                                <li>
+                                                    <a href="{{ $link->platform_link }}" target="_blank" title="{{ $link->platform_name }}">
+                                                        <img src="{{ config('app.url') }}/storage/{{ $link->platform_icon}}" width="{{ $link->platform_name == 'Facebook' ? 17 : 26}}" height="26" alt="{{ $link->platform_name }}">
+                                                    </a>
+                                                </li>
+                                                @endforeach
+                                                <!-- <li><a href="javascript:void(0)" title="instagram"><img
                                                             src="{{ asset('assets/images/instagram-icon.svg') }}" width="26"
                                                             height="26" alt="instagram-icon"></a></li>
                                                 <li><a href="javascript:void(0)" title="twitter"><img
@@ -99,7 +116,7 @@
                                                             alt="twitter-icon"></a></li>
                                                 <li><a href="javascript:void(0)" title="facebook"><img
                                                             src="{{ asset('assets/images/facebook-icon.svg') }}" width="17" height="26"
-                                                            alt="facebook-icon"></a></li>
+                                                            alt="facebook-icon"></a></li> -->
 
                                             </ul>
                                         </div>

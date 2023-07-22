@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
 use App\Models\UserAppointmentOtp;
 use App\Models\Appointments;
 use Illuminate\Http\Request;
 use App\Helper\Helper;
+use App\Mail\AppointmentReminder;
 
 class AppointmentController extends Controller
 {
@@ -42,6 +44,8 @@ class AppointmentController extends Controller
             'health_problem' => $request->health_problem,
             'appointment_date' => $request->appointment_date
         ]);
+
+        Mail::to($request->email)->send(new AppointmentReminder($request->appointment_date, $request->health_problem));
 
         return response()->json(['success' => 'Appointment booked successfully.']);
     }

@@ -1793,6 +1793,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin: auto;
 }
 
+.doctor-card .text p {
+  font-size: 14px;
+}
+
 .doctors-tabs-wp {
   margin: 110px 0 80px 0;
 }

@@ -19,13 +19,15 @@
                 <div class="hint-text">Notification for appointment and reminders will
                     be sent
                     to this email address.</div>
-                <div class="row">
-                    <!-- <div class="col-lg-9"> -->
+                    <input type="text" id="email" name="email"
+                            placeholder="Email Address">
+                <!-- <div class="row">
+                    <div class="col-lg-9">
                         <input type="text" id="email" name="email"
                             placeholder="Email Address">
-                    <!-- </div> -->
+                    </div>
 
-                    <!-- <div class="col-lg-3">
+                    <div class="col-lg-3">
                         <button id="verifyUser" class="sec-btn solid-btn"
                             title="Verify"><span>Verify</span>Verify</button>
                     </div>
@@ -37,21 +39,21 @@
                             <button id="submitOTP" class="sec-btn solid-btn"
                                 title="Submit"><span>Submit</span>Submit</button>
                         </div>              
-                    </div> -->
-                    
-                    
-                </div>
+                    </div>
+                </div> -->
             </div>
         </div>
         <div class="col-lg-12">
             <div class="wpcf7-form-control-wrap">
                 <label for="mobile-no">Mobile Number</label>
-                <div class="row">
-                    <!-- <div class="col-lg-9"> -->
+                <input type="text" id="mobile_number" name="mobile_number"
+                            placeholder="Mobile Number">
+                <!-- <div class="row">
+                    <div class="col-lg-9">
                         <input type="text" id="mobile_number" name="mobile_number"
                             placeholder="Mobile Number">
-                    <!-- </div> -->
-                </div>
+                    </div>
+                </div> -->
             </div>
         </div>
         <div class="col-lg-12">

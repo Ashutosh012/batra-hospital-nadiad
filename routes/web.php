@@ -33,3 +33,7 @@ Route::get('/{slug}', [BlogController::class, 'showBlogDetail'])->name('blog-det
 //Route::get('/{slug}', [PageController::class, 'pageDetail'])->name('page-detail');
 
 Route::get('/c/contact', [ContactController::class, 'contactUs'])->name('contact');
+
+Route::get('/e/email', function () {
+    return view('emails.appointment');
+});
