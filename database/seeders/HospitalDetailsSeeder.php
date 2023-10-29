@@ -15,7 +15,8 @@ class HospitalDetailsSeeder extends Seeder
     {
         HospitalDetails::factory()->create([
             'address' => '1st floor, Kant Arcade, Piplag Chokdi, Nadiad- 387001',
-            'helpline_number' => '+91 9101339671'
+            'helpline_number' => '+91 9101339671',
+            'map_link' => 'https://google.com'
         ]);
     }
 }
