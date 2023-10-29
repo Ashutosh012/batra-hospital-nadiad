@@ -5,17 +5,17 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="sec-title text-center">
+                            @php
+                                $hero_section = \App\Models\Description::where('section_order',3)->first();
+                            @endphp
+                            @if($hero_section)
                             <h2 class="h2-title icon wow fadeup-animation" data-wow-duration="0.8s"
-                                data-wow-delay="0.2s">Facilities We Provide</h2>
+                                data-wow-delay="0.2s">{{ $hero_section->module_name }}</h2>
                             <div class="title-sub-text wow fadeup-animation" data-wow-duration="0.8s"
                                 data-wow-delay="0.3s">
-                                <p>Explore Our Completed Services! Consectetur adipiscing elitt elit tellus,
-                                    luctus
-                                    pulvinar dapibus leoconsectetur luctus nec.Explore Our Completed Services!
-                                    Consectetur adipiscing elitt elit tellus, luctus pulvinar dapibus
-                                    leoconsectetur
-                                    luctus nec.</p>
+                                <p>{{ $hero_section->module_description }}</p>
                             </div>
+                            @endif
                         </div>
                         <div class="main-facility-content">
                             <div class="card-row first-row">

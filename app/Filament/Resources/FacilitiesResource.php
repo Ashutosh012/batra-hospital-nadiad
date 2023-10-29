@@ -17,7 +17,7 @@ class FacilitiesResource extends Resource
 {
     protected static ?string $model = Facilities::class;
 
-    protected static ?string $navigationGroup = 'Facilities';
+    protected static ?string $navigationGroup = 'Home Page Sections';
 
     protected static ?string $navigationIcon = 'heroicon-o-shield-check';
 

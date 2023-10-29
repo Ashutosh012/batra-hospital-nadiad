@@ -17,6 +17,8 @@ class SocialMediaResource extends Resource
 {
     protected static ?string $model = SocialMedia::class;
 
+    protected static ?string $navigationGroup = 'Social Media Links';
+
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     public static function form(Form $form): Form

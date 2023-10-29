@@ -13,10 +13,13 @@
                                 </div>
                                 @php
                                 $hospital_details = \App\Models\HospitalDetails::where('id',1)->first();
-                                $hospital_address = $hospital_details->address;
-                                $hospital_helpline = $hospital_details->helpline_number;
-                                $hospital_maplink = $hospital_details->map_link;
+                                if($hospital_details){
+                                    $hospital_address = $hospital_details->address;
+                                    $hospital_helpline = $hospital_details->helpline_number;
+                                    $hospital_maplink = $hospital_details->map_link;
+                                }
                                 @endphp
+                                @if($hospital_details)
                                 <div class="contact-box">
                                     <h4 class="h4-title">Address</h4>
                                     <a href="{{ $hospital_maplink }}" target="_blank">{{ $hospital_address }}</a>
@@ -25,6 +28,7 @@
                                     <h4 class="h4-title">Our Helpline Number</h4>
                                     <a href="tel:{{ $hospital_helpline }}">Call : {{ $hospital_helpline }}</a>
                                 </div>
+                                @endif
                                 <div class="contact-box">
                                     <h4 class="h4-title">Opening Hours</h4>
                                     <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia

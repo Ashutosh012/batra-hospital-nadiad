@@ -17,9 +17,9 @@ class OurservicesResource extends Resource
 {
     protected static ?string $model = Ourservices::class;
 
-    protected static ?string $navigationGroup = 'Our Services';
+    protected static ?string $navigationGroup = 'Home Page Sections';
 
-    protected static ?string $navigationIcon = 'heroicon-o-pencil';
+    protected static ?string $navigationIcon = 'heroicon-o-phone';
 
     public static function form(Form $form): Form
     {

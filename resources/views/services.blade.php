@@ -3,17 +3,21 @@
         <div class="sec-wp">
             <div class="container">
                 <div class="row">
+                    @php
+                    $hero_section = \App\Models\Description::where('section_order',2)->first();
+                    @endphp
+                    @if($hero_section)
                     <div class="col-lg-12">
                         <div class="sec-title white-text">
                             <h2 class="h2-title icon wow fadeup-animation" data-wow-duration="0.8s"
-                                data-wow-delay="0.2s">Our Services</h2>
+                                data-wow-delay="0.2s">{{ $hero_section->module_name }}</h2>
                             <div class="title-sub-text wow fadeup-animation" data-wow-duration="0.8s"
                                 data-wow-delay="0.3s">
-                                <p>We Offer Different Services To Improve Yourraise awareness about the value of
-                                    continuous patient monitoring.</p>
+                                <p>{{ $hero_section->module_description }}</p>
                             </div>
                         </div>
                     </div>
+                    @endif
                 </div>
                 <div class="row">
 
