@@ -3,67 +3,58 @@
     <div class="appointment-form">
         <div class="col-lg-12">
             <div class="wpcf7-form-control-wrap">
-                <label for="fname">Patients First Name</label>
+                <label for="fname">Patient's First Name</label>
                 <input type="text" id="fname" name="first_name" placeholder="First Name">
                 <p id="fnameError" style="color: red;"></p>
             </div>
         </div>
         <div class="col-lg-12">
             <div class="wpcf7-form-control-wrap">
-                <label for="lname">Patients Last Name</label>
+                <label for="lname">Patient's Last Name</label>
                 <input type="text" id="lname" name="last_name" placeholder="Last Name">
                 <p id="lnameError" style="color: red;"></p>
             </div>
         </div>
+        
         <div class="col-lg-12">
             <div class="wpcf7-form-control-wrap">
-                <label for="email">Email Address</label>
-                <div class="hint-text">Notification for appointment and reminders will
-                    be sent
+                <label for="mobile-no">Email Address</label>
+                <div class="hint-text">Notification for appointment and reminders will be sent
                     to this email address.</div>
+                <div class="row">
+                    <div class="col-lg-9">
                     <input type="text" id="email" name="email"
                             placeholder="Email Address">
-                <!-- <div class="row">
-                    <div class="col-lg-9">
-                        <input type="text" id="email" name="email"
-                            placeholder="Email Address">
                     </div>
-
                     <div class="col-lg-3">
-                        <button id="verifyUser" class="sec-btn solid-btn"
+                        <button class="sec-btn solid-btn"
                             title="Verify"><span>Verify</span>Verify</button>
                     </div>
-
-                    <div class="col-3 mt-2" style="display:none;" id="getOTP">
-                        <input type="text" id="enterOtp" name="otp"
-                            placeholder="Enter OTP" maxlength="6">                                      
-                        <div class="mt-2">
-                            <button id="submitOTP" class="sec-btn solid-btn"
-                                title="Submit"><span>Submit</span>Submit</button>
-                        </div>              
-                    </div>
-                </div> -->
+                </div>
                 <p id="emailError" style="color: red;"></p>
             </div>
         </div>
         <div class="col-lg-12">
             <div class="wpcf7-form-control-wrap">
                 <label for="mobile-no">Mobile Number</label>
-                <input type="text" id="mobile_number" name="mobile_number"
-                            placeholder="Mobile Number" maxlength=10>
-                <p id="mobileError" style="color: red;"></p>
-                <!-- <div class="row">
+                <div class="hint-text">Notification for appointment and reminders will be sent
+                    to this number.</div>
+                <div class="row">
                     <div class="col-lg-9">
                         <input type="text" id="mobile_number" name="mobile_number"
-                            placeholder="Mobile Number">
+                            placeholder="Mobile Number" maxlength=10>
                     </div>
-                </div> -->
+                    <div class="col-lg-3">
+                        <button class="sec-btn solid-btn"
+                            title="Verify"><span>Verify</span>Verify</button>
+                    </div>
+                </div>
+                <p id="mobileError" style="color: red;"></p>
             </div>
         </div>
         <div class="col-lg-12">
             <div class="wpcf7-form-control-wrap">
                 <label for="health_problem">Enter Your Health Problem</label>
-                <!-- <input type="text" id="health_problem" name="health_problem" placeholder="Enter Your Health Problem"> -->
                 <textarea id="health_problem" name="health_problem" rows="4" cols="50" maxlength="350" required></textarea>
                 <p id="healthProblemError" style="color: red;"></p>
             </div>
@@ -85,6 +76,7 @@
         <div class="appointment-form-btn">
             <button id="appointmentFormBtn" class="sec-btn solid-btn"
                 title="submit"><span>submit</span></button>
+            <img width="50" height="50" id="loaderSubmit" class="loader-submit" src="{{ asset('assets/images/loader.gif') }}" />
         </div>
     </div>
 </form>
@@ -103,6 +95,7 @@
 <script type="text/javascript">
 
     $(document).ready(function(){
+        $("#loaderSubmit").css("display", "none");
         config = {
             enableTime: true,
             dateFormat: 'Y-m-d H:i',
@@ -123,22 +116,30 @@
 
                 // Set different time ranges for each day
                 if (currentDay !== 0) {
-                    // Monday to Saturday
-                    if (currentDate.getHours() < 12) {
-                        // Morning working hours
+                    console.log('line no 119', currentDate.getHours())
+                    if(currentDate.getHours() < 10){
+                        minTime = "10:00";
+                        toastr.error("Please select time between 10:00AM to 01:00PM");
+                        instance.set('minTime', minTime);
+                        return false;
+                    }
+                    if(currentDate.getHours() > 13 || currentDate.getHours() > 16){
                         minTime = "10:00";
                         maxTime = "13:00";
-                    } else {
-                        // Evening working hours
+                        instance.set('minTime', minTime);
+                        instance.set('maxTime', maxTime);
+                        toastr.error("Please select time between 04:00PM to 06:00PM");
+                        return false;
+                    }
+                    if(currentDate.getHours() > 18){
                         minTime = "16:00";
                         maxTime = "18:00";
+                        instance.set('minTime', minTime);
+                        instance.set('maxTime', maxTime);
+                        toastr.error("Please book the appointment of next available dates.");
+                        return false;
                     }
                 }
-
-                // Setting the minTime and maxTime dynamically
-                instance.set('minTime', minTime);
-                instance.set('maxTime', maxTime);
-
             }
         }
         flatpickr("input[type=datetime-local]", config);
@@ -178,7 +179,7 @@
         }
 
         function isValidMobile(mobile) {
-            var mobileRegex = /^[6-9]\d{9}$/; // Indian mobile numbers start with 6, 7, 8, or 9
+            var mobileRegex = /^[6-9]\d{9}$/;
             return mobileRegex.test(mobile);
         }
 
@@ -196,13 +197,10 @@
         $('#health_problem').on('keyup blur',function() {
             var health_problem = $(this).val().trim();
             var characterCount = health_problem.length;
-
             if (health_problem === '') {
                 $('#healthProblemError').text('Health Problem Description is required.');
-                //event.preventDefault();
             } else if (characterCount < 100) {
                 $('#healthProblemError').text('Please provide a description of at least 100 words.');
-                //event.preventDefault();
             } else {
                 $('#healthProblemError').text('');
             }
@@ -216,6 +214,8 @@
 
     $("#appointmentFormBtn").click(function(e){
         e.preventDefault();
+        $("#loaderSubmit").css("display", "block");
+        $("#appointmentFormBtn").css("display", "none");
 
         var fname = $("#fname").val().trim();
         var lname = $("#lname").val().trim();
@@ -250,7 +250,7 @@
         }
 
         function isValidMobile(mobile) {
-            var mobileRegex = /^[6-9]\d{9}$/; // Indian mobile numbers start with 6, 7, 8, or 9
+            var mobileRegex = /^[6-9]\d{9}$/;
             return mobileRegex.test(mobile);
         }
 
@@ -287,6 +287,11 @@
                 if($.isEmptyObject(data.error)){
                     toastr.success(data.success);
                     document.getElementById("appointmentForm").reset(); 
+                    $("#loaderSubmit").css("display", "none");
+                    $("#appointmentFormBtn").css("display", "block");
+                } else {
+                    $("#loaderSubmit").css("display", "none");
+                    $("#appointmentFormBtn").css("display", "block");
                 }
             }
         });

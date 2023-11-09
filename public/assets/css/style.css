@@ -1618,6 +1618,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 100%;
 }
 
+.appointment-form-btn .loader-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*==========Appointment CSS End==========*/
 /*==========Our Team CSS Start==========*/
 .isotope-wrapper .grid {
@@ -5961,6 +5967,12 @@ section.main-blog.service-page {
     width: 40px;
     height: 40px;
     font-size: 18px;
+  }
+
+  .loader-submit {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .scroll-to-top-btn {
